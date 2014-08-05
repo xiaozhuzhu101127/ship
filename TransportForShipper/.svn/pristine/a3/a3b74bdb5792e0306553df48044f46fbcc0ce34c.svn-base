@@ -1,0 +1,166 @@
+package com.topjet.shipper.activity;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import android.os.Bundle;
+import android.os.Message;
+import android.view.View;
+import android.widget.EditText;
+
+import com.topjet.shipper.BaseActivity;
+import com.topjet.shipper.R;
+import com.topjet.shipper.model.UserInfo;
+import com.topjet.shipper.util.Common;
+import com.topjet.shipper.util.DefaultConst;
+import com.topjet.shipper.util.IdentityCardValidator;
+import com.topjet.shipper.util.PhoneValidator;
+
+/**
+ * <pre>
+ * Copyright:	Copyright (c)2009  
+ * Company:		杭州龙驹信息科技
+ * Author:		HuLingwei
+ * Create at:	2013-8-30 下午3:01:36  
+ *  
+ * 修改历史:完善资料
+ * 日期    作者    版本  修改描述
+ * ------------------------------------------------------------------
+ * 
+ * </pre>
+ */
+
+public class CompleteActivity extends BaseActivity {
+
+	EditText telView;
+	EditText scopeView;
+	EditText mIdcView;
+	EditText mNameView;
+	EditText mCompanyView;
+	EditText mAddressView;
+	
+	
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		setContentView(R.layout.activity_complete);
+		super.onCreate(savedInstanceState);
+
+		common_title.setText("完善资料");
+		common_recommand.setVisibility(View.VISIBLE);
+
+		mIdcView = (EditText) findViewById(R.id.complete_idc);
+		mNameView = (EditText) findViewById(R.id.complete_name);
+		mCompanyView = (EditText) findViewById(R.id.complete_company);
+		mAddressView = (EditText) findViewById(R.id.complete_address);
+		telView = (EditText) findViewById(R.id.complete_tel);
+		scopeView = (EditText) findViewById(R.id.complete_scope);
+		
+		fetchData();
+	}
+
+	private void renderData(JSONObject jsonData) {
+		hindProgress();
+		JSONObject data = null;
+		try {
+			data = jsonData.getJSONObject("MemberInfo");
+		} catch (JSONException e) {
+			e.printStackTrace();
+			return;
+		}
+		// getUserInfo可能为空，原因未知，待继续改进
+		if (null != app.getUserInfo()) {
+			app.getUserInfo().cardNo = data.optString("idno");
+			app.getUserInfo().realName = data.optString("realName");
+			app.getUserInfo().companyName = data.optString("companyName");
+			app.getUserInfo().plate1 = data.optString("plate1");
+			app.getUserInfo().plate2 = data.optString("plate2");
+			app.getUserInfo().plate3 = data.optString("plate3");
+			app.getUserInfo().dctTT = data.optString("dct_tt");
+			app.getUserInfo().dctUt = data.optString("dct_tklen");
+			app.getUserInfo().tkTarget1 = data.optString("tkTarget1");
+			app.getUserInfo().tkTarget2 = data.optString("tkTarget2");
+			app.getUserInfo().tkTarget3 = data.optString("tkTarget3");
+			app.getUserInfo().tkTarget4 = data.optString("tkTarget4");
+			app.getUserInfo().address=data.optString("address");
+			app.getUserInfo().address=data.optString("TEL");
+			app.getUserInfo().address=data.optString("SCOPE");
+			mIdcView.setText(app.getUserInfo().cardNo);
+			mNameView.setText(app.getUserInfo().realName);
+			mCompanyView.setText(app.getUserInfo().companyName);
+			telView.setText(app.getUserInfo().tel);
+			scopeView.setText(app.getUserInfo().scope);
+		}
+	}
+
+	private void fetchData() {
+
+		this.initProgress("加载中......");
+		this.mLoadData.getMobileMemberInfoById(baseHandler, DefaultConst.CMD_GET_MOBILE_MEMBER_INFO_BY_ID);
+	}
+
+	private void submit() {
+		String idc = mIdcView.getText().toString().trim();
+
+		if (!Common.isEmpty(idc) && !IdentityCardValidator.validateCard(idc)) {
+			Common.showToast("身份证号码格式不正确！", this);
+			mIdcView.requestFocus();
+			return;
+		}
+		String name = mNameView.getText().toString().trim();
+		if (name.length() > 20) {
+			Common.showToast("名字过长！", this);
+			mNameView.requestFocus();
+			return;
+		}
+		String company = mCompanyView.getText().toString().trim();
+		if (company.length() > 50) {
+			Common.showToast("公司名称过长！", this);
+			mCompanyView.requestFocus();
+			return;
+		}
+		String address = mAddressView.getText().toString().trim();
+		if (address.length() > 50) {
+			Common.showToast("经营地址过长！", this);
+			mAddressView.requestFocus();
+			return;
+		}
+		String tel = mAddressView.getText().toString().trim();
+		if (!PhoneValidator.validateMobile(tel)) {
+			Common.showToast("手机号码格式不正确!",this);
+			telView.requestFocus();
+			return;
+		}
+		String scope = mAddressView.getText().toString().trim();
+		if (address.length() > 50) {
+			Common.showToast("经营范围过长！", this);
+			scopeView.requestFocus();
+			return;
+		}
+
+		this.initProgress("正在提交数据，请稍后");
+		UserInfo userInfo = new UserInfo();
+		userInfo.cardNo = idc;
+		userInfo.realName = name;
+		userInfo.companyName = company;
+		userInfo.address=address;
+		userInfo.tel=tel;
+		userInfo.scope=scope;
+		
+		this.mLoadData.updateMobileMemberInfo(baseHandler, DefaultConst.CMD_UP_MOBILE_MEMBER_INFO, userInfo);
+	}
+
+	
+	public void onClick(View v) {
+		switch (v.getId()) {
+		case R.id.complete_submit:
+			submit();
+			break;
+		}
+	}
+	@Override
+	protected void ioHandler(Message msg) {
+		if (msg.what == DefaultConst.CMD_GET_MOBILE_MEMBER_INFO_BY_ID) 
+			renderData((JSONObject) msg.obj);
+	}
+	
+}

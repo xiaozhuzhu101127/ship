@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+	<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+	    android:layout_width="match_parent"
+	    android:layout_height="45dp"
+	    android:drawableLeft="@drawable/txltb"
+	    android:gravity="center_vertical"
+	    android:textSize="16sp"
+	    android:textColor="#666666"
+	    android:ellipsize="marquee"
+	    android:singleLine="true"
+	    android:paddingLeft="5dp"
+	    android:id="@+id/autocomplete"/>

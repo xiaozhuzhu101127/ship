@@ -1,0 +1,98 @@
+package com.topjet.shipper.util;
+
+import java.util.Map;
+
+import com.topjet.shipper.R;
+import com.topjet.shipper.adapter.MapAdapter;
+
+import android.app.Dialog;
+import android.content.Context;
+import android.view.Display;
+import android.view.Window;
+import android.view.WindowManager;
+import android.widget.GridView;
+
+
+/**  
+ * <pre>
+ * Copyright:	Copyright (c)2009  
+ * Company:		杭州龙驹信息科技
+ * Author:		HuLingwei
+ * Create at:	2013-7-16 下午2:22:46  
+ *  
+ * 修改历史:
+ * 日期    作者    版本  修改描述
+ * ------------------------------------------------------------------  
+ * 
+ * </pre>
+ */
+
+public class MyDialog extends Dialog{
+    
+    private Window window = null;
+    private MapAdapter adapter;
+    private int layoutResID;
+
+    private boolean changed;
+
+    public MyDialog(Context context, int layoutResID){
+    	super(context);
+    	this.layoutResID = layoutResID;
+    	this.adapter = new MapAdapter(context);
+    }
+
+    public MyDialog(Context context, int layoutResID, Map<String, String> data)
+    {
+        super(context);
+        this.layoutResID = layoutResID;
+        this.adapter = new MapAdapter(context, data);
+    }
+
+    public void setData(Map<String, String> data){
+    	this.adapter.setData(data);
+    }
+
+    public void setChanged(boolean changed){
+    	this.changed = changed;
+    }
+
+    public void showDialog(int x, int y){
+    	requestWindowFeature(Window.FEATURE_NO_TITLE);//不要标题
+        setContentView(layoutResID);
+        
+        windowDeploy(x, y);
+        
+        //设置触摸对话框以外的地方取消对话框
+        setCanceledOnTouchOutside(true);
+        show();
+    }
+    
+    //设置窗口显示
+    public void windowDeploy(int x, int y){
+        window = getWindow(); //得到对话框
+        window.setWindowAnimations(R.style.dialogWindowAnim); //设置窗口弹出动画
+        window.setBackgroundDrawableResource(R.color.gridview); //设置对话框背景为透明
+        WindowManager.LayoutParams wl = window.getAttributes();
+        //根据x，y坐标设置窗口需要显示的位置（默认是居中的）
+        wl.x = x; //x小于0左移，大于0右移
+        wl.y = y; //y小于0上移，大于0下移  
+//      wl.gravity = Gravity.BOTTOM; //gravity的默认值为居中Gravity.CENTER
+//      wl.alpha = 0.6f; //设置透明度
+        //宽度和高度
+//        wl.height=720;
+//        wl.width=480;
+        //将对话框的大小按屏幕大小的百分比设置
+        WindowManager m = window.getWindowManager();
+        Display d = m.getDefaultDisplay(); // 获取屏幕宽、高用
+        wl.height = (int) (d.getHeight() * 0.5); // 高度设置为屏幕的0.5
+        wl.width = (int) (d.getWidth() * 1); // 宽度设置为屏幕的1
+
+        window.setAttributes(wl);
+        GridView grid = (GridView)window.findViewById(R.id.gridview);
+        grid.setAdapter(adapter);
+        if(changed){
+        	adapter.notifyDataSetChanged();
+        }
+        changed = false;
+    }
+}

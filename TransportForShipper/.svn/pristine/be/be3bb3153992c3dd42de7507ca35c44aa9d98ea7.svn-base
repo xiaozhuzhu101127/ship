@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">560货主版</string>
+    <string name="pull_to_refresh">下拉可以刷新</string>  
+    <string name="release_to_refresh">释放立即刷新</string>  
+    <string name="refreshing">正在刷新…</string>  
+    <string name="not_updated_yet">暂未更新过</string>  
+    <string name="updated_at">上次更新于%1$s前</string>  
+    <string name="updated_just_now">刚刚更新</string>  
+    <string name="time_error">时间有问题</string>  
+    <string name="number_null">--</string>
+    <string name="welcome">欢迎登陆</string>
+    <string name="mobile">手机号码</string>
+    <string name="password">密码</string>
+    <string name="getpsd">获取密码</string>
+    <string name="login">登录</string>
+    <string name="todaygoods">今日货源</string>
+    <string name="fabugoods">发布货源</string>
+    <string name="mycomplete">完善资料</string>
+    <string name="subupdate">确认修改</string>
+    <string name="subts">提交投诉</string>
+    <string name="thgoods">网上货源</string>
+    <string name="trucktj">周边空车</string>
+    <string name="historygoods">历史货源</string>
+    <string name="goods">货源</string>
+    <string name="delmsg">全部删除</string>
+    <string name="mypj">我的评价</string>
+    <string name="goods2">货物:</string>
+    <string name="update">修改</string>
+    <string name="bc">报错</string>
+    <string name="cxcx">诚信查询</string>
+    <string name="hyfl">会员福利</string>
+    <string name="moreyy">更多应用</string>
+    <string name="refresh">刷新</string>
+    <string name="lowprice">最低报价</string>
+    <string name="publisher">发布者</string>
+    <string name="nobj">暂0人报价</string>
+    <string name="traded">已成交 !</string>
+    <string name="total">共有</string>
+    <string name="qhh">位司机在抢这批货</string>
+    <string name="confirm">确认成交</string>
+    <string name="teldriver">呼叫司机</string>
+    <string name="nodriver">暂无司机报价</string>
+    <string name="recommend">推荐</string>
+    <string name="location">定位</string>
+    <string name="delete">清空</string>
+    <string name="cancle">取消</string>
+    <string name="ts">投诉</string>
+    <string name="queryme">查我</string>
+    <string name="depart">出发地:</string>
+    <string name="target">目的地:</string>
+    <string name="select">请选择</string>
+    <string name="hissearch">近期搜索记录</string>
+    <string name="delhissearch">清除搜索历史</string>
+    <string name="select2">请输入</string>
+    <string name="commongoods">普货</string>
+    <string name="goodsw">5</string>
+    <string name="lifang">立方</string>
+    <string name="dun">吨</string>
+    <string name="tklengbx">车长不限</string>
+    <string name="tktypebx">普通车</string>
+    <string name="tklen">车长:</string>
+    <string name="tktype">车型:</string>
+    <string name="payway">货到付款</string>
+    <string name="gsload">一装一卸</string>
+    <string name="transportprice">可接受运价:</string>
+    <string name="infoprice">信息费:</string>
+    <string name="autodeal">有报价低于本价格，系统可自动成交！</string>
+    <string name="yuan">元</string>
+    <string name="defaultprice">默认为面议</string>
+    <string name="gsloaddate">装货时间:</string>
+    <string name="desc">其他说明:</string>
+    <string name="pub">电话联系时需说明是通过560平台上看到的货源信息！</string>
+    <string name="bx">不限</string>
+    <string name="tkinfo">车辆信息</string>
+    <string name="tktarget">期望流向</string>
+    <string name="tkdriver">司机信息</string>
+    <string name="lastloca">最后位置</string>
+    <string name="tradeprice">成交价</string>
+    <string name="repub">重发</string>
+    <string name="del">删除</string>
+    <string name="crenum">请输入被查询者的联系号码</string>
+    <string name="creexp">固定电话请带区号:如057128002560</string>
+    <string name="contact">通讯录</string>
+    <string name="note">记录</string>
+    <string name="sub">立即查询</string>
+    <string name="autoHint">查看更多本地通讯录</string>
+    <string name="alert">560提示</string>
+    <string name="viewpj">查看评价</string>
+    <string name="addpj">添加评价</string>
+    <string name="tousu">投诉此人</string>
+    <string name="iferro">信息纠错</string>
+    <string name="topj">我要评价</string>
+    <string name="pjdetail">查看评论</string>
+    <string name="yslnum">诚信值:</string>
+    <string name="zhdf">综合得分</string>
+    <string name="pjcontent">评价内容</string>
+    <string name="tshint">请输入投诉事宜……</string>
+    <string name="pjhint">请输入评价内容……</string>
+    <string name="pjhint2">温馨提示:1星为最差，5星为最好，请谨慎投诉，诚信留言！</string>
+    <string name="tshint2">温馨提示:请谨慎投诉，诚信留言！</string>
+    <string name="gsowner">货主</string>
+    <string name="cerup">确认修改</string>
+    <string name="yourut">您的身份:</string>
+    <string name="yourname">您的姓名:</string>
+    <string name="yourno">身份证号:</string>
+    <string name="yourtel">固定电话:</string>
+    <string name="companyname">公司名称:</string>
+    <string name="companyadd">经营地址:</string>
+    <string name="companyfw">经营范围:</string>
+    <string name="select3">请选择错误类型:</string>
+    <string name="scalert">①积分赠送只限前10000笔抢好货交易。\n②所有会员限每天补贴一次。\n③相同的交易方，每周只可领取一次。\n④成交后第二天，积分充入账户，可即时兑换。</string>
+    <string name="quit">退出当前账号</string>
+    <string name="about">560是最安全的物流交易平台，具有安全、\n价优、配货快的核心优势，欢迎使用。</string>
+    <string name="about2">Copyright © 2014-2020\n566560.com版权所有</string>
+    <string name="recom">温馨提示:朋友安装后 ，记得提醒他送你一个五星全评价，有助您开展业务 </string>
+    <string name="recomnow">立即推荐</string>
+    <string name="recomobile">营销代表手机号码:</string>
+    <string name="score_rule_01">
+        
+<![CDATA[
+1、 积分物品由人工核实后发放。 
+]]>
+    </string>
+    <string name="score_rule_02">
+<![CDATA[
+2、 数量有限，先换先得。 
+]]>
+    </string>
+    <string name="score_rule_03">
+<![CDATA[
+3、 本次数量兑换完毕后，下期兑换的商品种类及数量会有所变动。 
+]]>
+    </string>
+    <string name="score_rule_04">
+<![CDATA[
+4、 订购银牌及以上服务的会员才可兑换以上商品。 
+]]>
+    </string>
+    <string name="score_rule_05">
+<![CDATA[
+5、 所有会员积分于12月31号22:00自动清零。
+]]>
+    </string>
+    <string name="score_rule_06">
+<![CDATA[
+6、 根据订购服务的不同，每天积分的获取的上限有所不同。免费会员每日最多可得积分100分。
+]]>
+    </string>
+    <string name="faq01">1、为什么安装后，来电时无法显示弹屏？</string>
+        <string name="faq011">
+首先，可能是您的网络连接未开启，请查看对应设置；其次，如果已确定开启网络连接，则可能是您的通讯网络暂时不支持在通话过程中获得联网数据（主要针对2G用户，电信3G用户），所以无法显示弹屏信息。</string>
+    <string name="faq02">2、运商行是否耗电？</string>
+        <string name="faq022">运商行仅在接打电话时运行，其他时候不运行，因此比其他同类产品耗电量小很多。经过严格评测，不会影响手机电池时间。 </string>
+    <string name="faq03">3、运商行是否耗流量？</string>
+        <string name="faq033">仅在接打电话时使用网络查询标记信息，每次查询的数据量在1K以内。30M流量可支持接打3万个电话。</string>
+    <string name="faq04">4、运商行诚信值如何计算？</string>
+        <string name="faq044">只能通过运商行实名认证的人员或是公司才有诚信值。诚信值根据用户的合作伙伴的多少、使用年限、有无投诉、有无表扬等多种标指计算而成，越高表示信用越好，越值得合作。</string>
+    <string name="reward_rule">
+<![CDATA[
+1、为物流从业人员安装本软件并满足以下条件的可得到人民币8元或等值返利。\n
+　1）该手机以前未安装过本软件\n
+　2）已输入营销代表手机号\n
+　3）活动有期效内\n
+\n
+2、为非物流从业人员安装，查实后每个扣发人民币40元。\n
+\n
+3、为非物流从业人员安装，事先申请可免于处罚且享受再推荐1元提成。\n
+\n
+4、本促销返利有效期至2013年12月31日。\n
+\n
+5、本方案最终解释权归上海拓景信息科技有限公司所有。\n
+\n
+6、物流从业人员包括:司机、车主、车队负责人、信息部、中介、物流公司工作人员。\n
+]]>
+    </string>
+    <string name="filter_promise">
+<![CDATA[
+郑重承诺:\n
+本功能只用于筛查，不作他用。如发生隐私泄漏并造成损失，560公司愿意10倍赔偿。
+]]>
+    </string>
+    <string name="recommend_sms_content">
+<![CDATA[
+我正在使用560配货软件，安全，价优，配货还很快，你也下载试试:\nwww.566560.com/d/hzysx.apk
+]]>
+    </string>
+    <string name="idv_announce">
+<![CDATA[
+身份证核查，5元/次。\n核查数据由公安部公民身份证信息数据库提供。
+]]>
+    </string>
+    <string name="user_licence">
+<![CDATA[
+请仔细阅读本协议——运商行根据以下条件和条款提供您所享有的服务\n
+\n
+运商行软件所提供的所有服务，其所有权全部属于运商行软件。用户必须完全同意所有以下服务条款并完成注册程序，才能享受运商行软件提供的各项服务。\n
+\n
+关于用户个人资料:\n
+\n
+用户必须提供详尽及准确的个人资料。如个人资料有任何变动，必须及时更新。如果因用户提供的资料不准确造成的用户损失，运商行软件不负担任何责任。造成侵害第二方以上利益的，运商行软件有权终止该用户使用本服务资格。\n
+关于账户及安全用户的人账号、密码只供用户本人使用。\n
+\n
+用户对账号、密码的安全负全部责任。用户应避免泄露个人账户信息，无论其是否授权，每个用户都要对用其账号进行的所有活动负全责。如果免费用账户余额为“0”或者不足以进行最后一次最低计费并且时间超过三个月时，运商行软件保留注销该用户的权利。\n
+\n
+关于隐私制度:\n
+\n
+运商行软件在非法律规定情况下，不会对行商行会员以外的机构或人员提供或泄漏用户的任何资料。用户同意运商行对用户提供或上传的所有信息进行加工处理并有权向会员提供。\n
+\n
+关于承担风险:\n
+\n
+用户应对使用服务承担个人风险，运商行软件对此不作任何类型的担保，不论明确的或隐含的。因目前网络产品使用环境相对复杂，运商行软件无法担保服务一定能满足用户要求，也无法担保本服务不会受网络环境影响而造成使用中的质量临时下降、中断或出现其它故障。\n
+\n
+关于质量保证:\n
+\n
+用户在使用运商行软件所提供的服务前应已经认识到本软件是基于在开放式Internet平台的服务，开放式Internet平台自身是缺乏质量保证体系的（QoS），如果用户发生注册、付费使用服务任何一项即表示用户已经明确同意接受本协议，运商行软件不保证所提供的服务一定能满足用户的要求，也不保证服务不会受中断，也不保证所提供的服务的及时性、安全性、接通率。对于任何由于服务质量导致的直接或间接损失，运商行软件不承担任何责任，用户在同意本条款前应已认识到运商行软件基于Internet平台所提供的服务是一项低成本服务，而非一项高投入的服务。\n
+\n
+关于使用范围:\n
+\n
+运商行软件提供的服务是面向Internet用户提供的一种基于Internet信息共享服务，限账户拥有人本人在Internet上使用，并不得将该服务转移或者提供给第三方。如果用户在有法律规定限制使用服务的国家或者地区使用本服务或将运商行软件所提供的服务用于非法用途，则由用户独立承担与此相关的一切直接和间接的法律责任和经济责任，运商行软件保留追究违规用户责任的权力。\n
+\n
+关于软件系统:\n
+\n
+本协议授权您，可以将运商行软件由单个用户在一台或多台计算机上亲自使用。您不得对本软件产品进行反向工程、反向编译和反向汇编，不得删除本软件及其他副本上一切关于版权的信息，不得制作和提供该软件的注册机及破解程序。除非适用法律明文允许上述活动，否则您必须遵守此协议限制。\n
+\n
+关于价格:\n
+\n
+服务的价格请查阅运商行软件（www.156315.com)，如果用户发生注册、付费或使用服务任何一项行为即表示用户已经明确同意接受本服务的资费标准。运商行软件有权根据相关国家或者相关地区政策的变化、服务范围、功能增加、市场情况等原因而调整收费标准，价格调整后所有用户已经交纳的费用包括已经消费的和没有消费的都不被返还。\n
+\n
+关于通告:\n
+\n
+所有发给用户的通告都会通过运商行软件发布，服务条款的修改、服务变更、或其它重要事情都会以此形式进行。通告发布后即已被视为已经送达所有用户，用户单方面承担收知运商行软件所有公告的责任。\n
+\n
+关于法律:\n
+\n
+用户不得利用运商行软件提供的服务从事任何违反当地法律法规的活动，否则承担由此引发的所有直接和间接的法律和经济责任。本协议的解释、效力及纠纷的解决，适用于中华人民共和国法律。若用户和上海拓景科技有限公司之间发生任何纠纷或争议，首先应友好协商解决，协商不成的，用户在此完全同意将纠纷或争议提交中华人民共和国法院管辖。\n
+\n
+上海拓景科技有限公司版权所有，保留一切解释权利。\n
+\n
+您明确地承认您已阅读本协议书并且了解本协议书中的权利，义务、条款及条件。\n
+如您点击“确定”按钮和/或持续地申请注册运商行帐号或安装运商行软件，则表明您已明确地同意接受本协议书的中各条款及条件的约束并给予运商行此中上述的权利。
+]]>
+    </string>
+    <string name="reward_detail">
+<![CDATA[
+一、具体规则\n
+每成功安装一份运商行手机版软件，运商行将拿出10元现金用于奖励与安装有关的三人，示例如下:\n
+1、A为B成功安装，A可得8元现金奖励。\n
+2、B为C成功安装，B可得8元现金奖励，A可得1元奖励。\n
+3、C为D成功安装，C可得8元现金奖励，B可得1元奖励，A可得1元奖励。\n
+4、D为E 成功安装，D可得8元现金奖励，C可得1元奖励，B可得1元奖励，A无奖励。\n
+二、收入预计\n
+假如您一个月内可安装10个用户，而这10个用户每人也能安装10个，则您可得到月奖励为:10*10*10+10*10+10*8=1180元。如果每人都能安装20人,则收入
+=20*20*20+20*20+20*8=8560元。\n
+三、操作步骤\n
+1、填入手机号并点击获取密码\n
+2、登陆后点击右上角“齿轮”进入软件设置页面\n
+3、点击“营销代表专用页”\n
+4、根据提示输入营销代表手机号并提交\n
+5、奖励发放到您的银行卡上\n
+四、注意事项\n
+1、以上奖励只限于前200000份安装。\n
+2、一台手机只发放一次奖励。\n
+3、只有完成营销代表的手机号码录入，系统才能为您结算提成，否则无法为您发放提成。\n
+4、填入的营销的手机号必须是其它人员手机。\n
+5、提成款发放，如遇到周末及节假日顺延。\n
+6、为非物流从业人员安装或虚假安装，每查实一个扣除32元奖励款。\n
+7、第一次发放奖励前，我们的客服人员会致电询问你的银行账号，以便打款，敬请配合。\n
+8、您可加入QQ群314102096，获得更多额外信息。\n
+9、本活动的最终解释权归杭州龙驹信息科技有限公司。\n
+]]>
+    </string>
+
+</resources>

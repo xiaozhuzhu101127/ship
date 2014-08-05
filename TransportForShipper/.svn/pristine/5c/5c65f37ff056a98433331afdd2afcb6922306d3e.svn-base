@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="@color/color_background">
+    <include 
+        layout="@layout/common_title"/>
+    <com.topjet.shipper.widget.RefreshableView  
+        android:id="@+id/refreshable_view"  
+        android:layout_width="match_parent"  
+        android:layout_height="0dp" 
+        android:layout_weight="1">  
+	    <ListView
+	        android:layout_width="match_parent"
+	        android:layout_height="match_parent"
+	        android:id="@+id/truck_listView"
+	        android:fadingEdge="none"
+	        android:divider="#CCCCCC"
+	        android:dividerHeight="0.5dp"/>
+    </com.topjet.shipper.widget.RefreshableView>
+	<include 
+        layout="@layout/common_footer"/>
+</LinearLayout>

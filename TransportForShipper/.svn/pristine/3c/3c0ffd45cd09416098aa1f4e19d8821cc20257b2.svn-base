@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_background"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/title_bar"
+        layout="@layout/common_title" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="@dimen/h_margin_big"
+        android:paddingRight="@dimen/h_margin_big"
+        android:paddingTop="20dp" >
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="48dp" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="运商行系统最终用户协议"
+                    android:textColor="#222222"
+                    android:textSize="24sp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="2dp"
+                    android:text="@string/user_licence"
+                    android:textColor="#666666"
+                    android:textSize="19sp" />
+            </LinearLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal" >
+			
+        <Button
+	        android:layout_width="70dp"
+	  		android:layout_height="40dp"
+	  		android:background="@drawable/btn20782"
+	  		style="@style/title_style"
+	  		android:text="同意"
+	  		android:onClick="onClick"
+	  		android:id="@+id/licence_agree"/>
+        <Button
+	        android:layout_width="70dp"
+	  		android:layout_height="40dp"
+	  		android:layout_marginLeft="25dp"
+	  		android:background="@drawable/btn20782"
+	  		style="@style/title_style"
+	  		android:text="取消"
+	  		android:onClick="onClick"
+	  		android:id="@+id/licence_disagree"/> 
+            
+        </LinearLayout>
+    </RelativeLayout>
+
+</LinearLayout>

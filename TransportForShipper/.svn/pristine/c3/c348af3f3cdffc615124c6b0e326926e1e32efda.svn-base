@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_background"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/title_bar"
+        layout="@layout/common_title" />
+	<LinearLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:background="@drawable/publishbg"
+	    android:orientation="vertical"
+	    android:padding="7dp" >
+    	<EditText 
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:background="@null"
+		    android:inputType="textMultiLine"
+            android:hint="@string/recommend_sms_content"
+            style="@style/main_style_4"
+            android:id="@+id/recommend_content"/>
+		<TextView 
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:layout_marginTop="15dp"
+            android:text="@string/recom"
+            style="@style/item_tk_2"/>
+	</LinearLayout>
+	<LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+	    <LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="43.81dp"
+	        android:layout_marginTop="7dp"
+	        android:layout_marginLeft="7dp"
+	        android:layout_marginRight="7dp"
+	        android:background="@drawable/crebg"
+	        android:gravity="center_vertical"
+	        android:orientation="horizontal"
+	        android:paddingLeft="5dp"
+	        android:paddingRight="10dp" >
+	        <AutoCompleteTextView
+	            android:id="@+id/recommend_input"
+	            android:layout_width="0dp"
+	            android:layout_height="wrap_content"
+	            android:layout_weight="1"
+	            android:completionThreshold="1"
+	            android:paddingLeft="15dp"
+	            android:background="@null"
+	            android:inputType="phone"
+	            android:textColor="@color/color_red"
+	            android:textSize="22sp" />
+	        <ImageView
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_marginLeft="7dp"
+	            android:src="@drawable/deltb2"
+	            android:id="@+id/credit_delete"
+	            android:onClick="onClick"/>
+	    </LinearLayout>
+    </LinearLayout>
+	<LinearLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="horizontal"
+	    android:background="@color/color_background"
+	    android:padding="5dp">
+	    <!-- 本地通讯录 -->
+	    <TextView
+	   		android:layout_width="80dp"
+	    	android:layout_height="50dp"
+	    	android:layout_gravity="center"
+	    	android:gravity="center"
+	    	android:background="@drawable/footerbg1"
+	   		android:drawableLeft="@drawable/bdtb"
+	   		style="@style/main_style_4"
+	   		android:text="@string/contact"
+	   		android:clickable="true"
+	   		android:onClick="onClick"
+	   		android:id="@+id/recommend_from_contact_btn"/>
+	    <!-- 中间按钮 -->
+	    <Button
+	        android:layout_width="0dp"
+	   		android:layout_height="50dp"
+	   		android:layout_weight="1"
+	   		android:layout_marginLeft="5dp"
+	   		android:background="@drawable/btn20782"
+	   		style="@style/title_style"
+	   		android:text="@string/recomnow"
+	   		android:onClick="onClick"
+	   		android:id="@+id/recommend_send"/>
+	    <!-- 通话记录-->
+	    <TextView
+	   		android:layout_width="80dp"
+	    	android:layout_height="50dp"
+	    	android:layout_marginLeft="5dp"
+	    	android:padding="7dp"
+	    	android:gravity="center"
+	    	android:background="@drawable/footerbg1"
+	   		android:drawableLeft="@drawable/jl"
+	   		style="@style/main_style_4"
+	   		android:text="@string/note"
+	   		android:clickable="true"
+	   		android:onClick="onClick"
+	   		android:id="@+id/recommend_from_history_btn"/>
+	</LinearLayout>
+</LinearLayout>

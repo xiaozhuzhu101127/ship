@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_background"
+    android:orientation="vertical" >
+
+      <include
+        android:id="@+id/title_bar"
+        layout="@layout/common_title" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="7dp"
+            android:orientation="vertical"
+            >
+            <TextView 
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="14dp"
+                android:textColor="#666666"
+                android:textSize="18sp"
+                android:text="请选择您的身份："
+                />
+            <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/common_while_bg"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:id="@+id/rl_driver"
+        android:onClick="onClick"
+         >
+         
+          <ImageView
+            android:id="@+id/img_id_driver"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+       
+            android:layout_centerVertical="true"
+            android:src="@drawable/complete_icon_driver" />
+
+        <TextView
+            android:id="@+id/widget_category_item_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:drawablePadding="8dp"
+            android:text="司机"
+                 android:textSize="19sp"
+            android:textColor="#595959"
+            android:layout_marginLeft="10dip"
+            android:layout_toRightOf="@+id/img_id_driver"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/jt" />
+    </RelativeLayout>
+    
+             <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/common_while_bg"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:id="@+id/rl_owner"
+        android:onClick="onClick"
+         >
+         
+          <ImageView
+            android:id="@+id/img_id_driver"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+       
+            android:layout_centerVertical="true"
+            android:src="@drawable/complete_icon_owner" />
+
+        <TextView
+            android:id="@+id/widget_category_item_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:drawablePadding="8dp"
+            android:text="货主"
+                 android:textSize="19sp"
+            android:textColor="#595959"
+            android:layout_marginLeft="10dip"
+            android:layout_toRightOf="@+id/img_id_driver"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/jt" />
+    </RelativeLayout>
+            
+            <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/common_while_bg"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:id="@+id/rl_info"
+        android:onClick="onClick"
+         >
+         
+          <ImageView
+            android:id="@+id/img_id_driver"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+       
+            android:layout_centerVertical="true"
+            android:src="@drawable/complete_icon_info" />
+
+        <TextView
+            android:id="@+id/widget_category_item_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:drawablePadding="8dp"
+            android:text="信息部"
+                 android:textSize="19sp"
+            android:textColor="#595959"
+            android:layout_marginLeft="10dip"
+            android:layout_toRightOf="@+id/img_id_driver"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/jt" />
+    </RelativeLayout>
+           <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/common_while_bg"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:id="@+id/rl_company"
+        android:onClick="onClick"
+         >
+         
+          <ImageView
+            android:id="@+id/img_id_driver"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+       
+            android:layout_centerVertical="true"
+            android:src="@drawable/complete_icon_company" />
+
+        <TextView
+            android:id="@+id/widget_category_item_label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:drawablePadding="8dp"
+            android:text="物流公司"
+            android:layout_marginLeft="10dip"
+            android:layout_toRightOf="@+id/img_id_driver"
+            android:textSize="19sp"
+            android:textColor="#595959"
+         
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/jt" />
+    </RelativeLayout>
+           
+        </LinearLayout>
+
+</LinearLayout>

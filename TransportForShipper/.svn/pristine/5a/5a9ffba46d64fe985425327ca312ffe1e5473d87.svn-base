@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_background"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/title_bar"
+        layout="@layout/common_title" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="10dp"
+            android:paddingLeft="@dimen/h_margin_big"
+            android:paddingRight="@dimen/h_margin_big" >
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:lineSpacingExtra="1dp"
+                android:text="@string/faq01"
+                style="@style/item_goods_2"/>
+			<TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:padding="3dp"
+                android:lineSpacingExtra="1dp"
+                android:text="@string/faq011"
+                android:background="@drawable/publishbg"
+                style="@style/main_style_4"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:lineSpacingExtra="1dp"
+                android:text="@string/faq02"
+                style="@style/item_goods_2"/>
+			<TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:padding="3dp"
+                android:lineSpacingExtra="1dp"
+                android:text="@string/faq022"
+                android:background="@drawable/publishbg"
+                style="@style/main_style_4"/>
+			<TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:lineSpacingExtra="1dp"
+                android:text="@string/faq03"
+                style="@style/item_goods_2"/>
+			<TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:padding="3dp"
+                android:lineSpacingExtra="1dp"
+                android:text="@string/faq033"
+                android:background="@drawable/publishbg"
+                style="@style/main_style_4"/>
+			<TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:lineSpacingExtra="1dp"
+                android:text="@string/faq04"
+                style="@style/item_goods_2"/>
+			<TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:padding="3dp"
+                android:lineSpacingExtra="1dp"
+                android:text="@string/faq04"
+                android:background="@drawable/publishbg"
+                style="@style/main_style_4"/>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="@color/color_background">
+    <RelativeLayout 
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:background="@drawable/head480bg">
+
+	    <Button
+	        android:id="@+id/dp_result_back"
+	        android:layout_width="59dp"
+	        android:layout_height="27.9dp"
+	        android:layout_alignParentLeft="true"
+	        android:layout_marginLeft="5dp"
+	        android:background="@drawable/back"
+	        android:layout_centerVertical="true"
+	        android:onClick="commonClick"/>
+	
+	    <TextView
+	        android:layout_width="wrap_content"
+	        android:layout_height="50dp"
+	        android:layout_centerHorizontal="true"
+	        android:paddingRight="31dp"
+	        android:gravity="center_vertical"
+	        android:text="@string/pjdetail"
+	        style="@style/title_style"
+	        android:id="@+id/dp_result_title" />
+	    <LinearLayout
+	        android:layout_width="wrap_content"
+	        android:layout_height="27.9dp"
+	        android:background="@color/color_zi"
+	        android:layout_centerVertical="true"
+			android:layout_marginRight="5dp"
+			android:layout_alignParentRight="true">
+		<Spinner
+			android:id="@+id/dp_result_spinner"
+			android:layout_width="93dp"
+	        android:layout_height="27.9dp"
+			android:spinnerMode="dropdown"
+			android:dropDownVerticalOffset="8dp"
+			android:background="@drawable/titlebtbg"
+			style="@style/title_style"/>
+	    <ImageView
+			android:id="@+id/dp_result_sj"
+			android:layout_width="wrap_content"
+	        android:layout_height="27.9dp"
+	        android:layout_marginRight="5dp"
+			android:src="@drawable/sj"
+			android:layout_gravity="center_vertical"/>
+		</LinearLayout>
+	</RelativeLayout>
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="0dp" 
+       	android:layout_weight="1"
+        android:id="@+id/listView"
+        android:fadingEdge="none"
+        android:divider="#CCCCCC"
+        android:dividerHeight="0.5dp"/>
+    <Button 
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/btn20782"
+        android:onClick="onClick"
+        android:text="@string/topj"
+        style="@style/title_style"
+        android:id="@+id/pjbtn" />
+</LinearLayout>

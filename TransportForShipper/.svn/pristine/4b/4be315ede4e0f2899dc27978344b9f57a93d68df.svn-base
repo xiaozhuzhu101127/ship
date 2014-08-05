@@ -1,0 +1,18 @@
+<resources>
+
+    <dimen name="indicator_right_padding">10dp</dimen>
+    <dimen name="indicator_corner_radius">12dp</dimen>
+    <dimen name="indicator_internal_padding">4dp</dimen>
+    <dimen name="header_footer_left_right_padding">24dp</dimen>
+    <dimen name="header_footer_top_bottom_padding">12dp</dimen>
+    <dimen name="main_item_margin">10dp</dimen>
+    <dimen name="h_margin_big">19dp</dimen>
+    <dimen name="h_margin_small">10dp</dimen>
+    <dimen name="h_margin_tiny">5dp</dimen>
+    <dimen name="item_height">40.634dp</dimen>
+    <dimen name="complete_input_margin">5dp</dimen>
+    <dimen name="settings_category_height">60dp</dimen>
+    <dimen name="category_item_height">60dp</dimen>
+    <dimen name="category_item_margin">9dp</dimen>
+
+</resources>

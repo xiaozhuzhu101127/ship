@@ -1,0 +1,219 @@
+package com.topjet.shipper.activity;
+
+import java.util.Date;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import android.app.ProgressDialog;
+import android.content.Intent;
+import android.os.Bundle;
+import android.os.Message;
+import android.view.View;
+import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.RatingBar;
+import android.widget.TextView;
+
+import com.audividi.imageloading.core.DisplayImageOptions;
+import com.audividi.imageloading.core.ImageLoader;
+import com.topjet.shipper.BaseActivity;
+import com.topjet.shipper.R;
+import com.topjet.shipper.model.Identity;
+import com.topjet.shipper.util.Common;
+import com.topjet.shipper.util.DefaultConst;
+import com.topjet.shipper.util.DisplayUtil;
+ 
+ 
+/**  
+ * <pre>
+ * Copyright:	Copyright (c)2014 
+ * Company:		杭州龙驹信息科技有限公司
+ * Author:		wanghm
+ * Create at:	2014-6-5 上午9:53:47  
+ * Description:我的560
+ *
+ * 修改历史:
+ * 日期    作者    版本  修改描述
+ * ------------------------------------------------------------------  
+ * 
+ * </pre>
+ */  
+public class MyDetailActivity extends BaseActivity{
+	/**
+	 * 需要heard右侧拥有资料有误按钮
+	 */
+	
+	String phone;
+	ProgressDialog mProgressDialog;
+	Button btn_other_function;
+	private ImageView  pictureImageView ;
+	
+	private TextView  realNameText ;
+	private TextView companyNameText ;
+	private TextView yslAccountText ;
+	
+	private RatingBar  fahuoxingjiBar ;
+	
+	private RatingBar chengyunxingjiBar ;
+	
+	private TextView fahuoxingjiCountText ;
+	
+	private TextView chengyunxingjiCountText ;
+	
+	private TextView mobileText ;
+	private TextView telText ;
+	private TextView paimingText ;
+	private TextView usrTypeText ;
+	private TextView memberLevelText ;
+	private TextView registerTimeText ;
+	private TextView companylinesText ;
+	private TextView companyAddressText;
+	private TextView commentText ;
+	private TextView levelView;
+	private TextView certView;
+	private LinearLayout viewpjLayout;
+	
+	
+	private String mobile;
+	
+	private String tel;
+	
+	protected DisplayImageOptions options=new DisplayImageOptions.Builder()
+	// 默认图片
+	.showStubImage(R.drawable.idc_photo)
+	.showImageForEmptyUri(R.drawable.idc_photo)
+	.cacheInMemory()
+	.cacheOnDisc()
+	.build();
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		setContentView(R.layout.activity_credit_result);
+		super.onCreate(savedInstanceState);	 
+		
+		common_title.setText("我的560");
+		common_main.setVisibility(View.VISIBLE);
+		footer_szcw.setVisibility(View.VISIBLE);
+		footer_bc.setVisibility(View.VISIBLE);
+		footer_center.setText("完善资料");
+		
+		phone = shareHelper.getUsername(); 
+		commentText = (TextView)findViewById(R.id.comment);
+		levelView = (TextView)findViewById(R.id.credit_level);
+		certView = (TextView)findViewById(R.id.credit_cert);
+		viewpjLayout = (LinearLayout)findViewById(R.id.credit_viewpj);
+		
+		
+		pictureImageView=(ImageView)findViewById(R.id.picture);
+		realNameText = (TextView)findViewById(R.id.realName);
+		companyNameText = (TextView)findViewById(R.id.companyName);
+		yslAccountText = (TextView)findViewById(R.id.yslAccount);  
+		fahuoxingjiBar = (RatingBar)findViewById(R.id.fahuoxingji);  
+		chengyunxingjiBar = (RatingBar)findViewById(R.id.chengyunxingji);  
+		
+		fahuoxingjiCountText = (TextView)findViewById(R.id.fahuoxingjicount);  
+		chengyunxingjiCountText= (TextView)findViewById(R.id.chengyunxingjicount);  
+		
+		mobileText= (TextView)findViewById(R.id.mobile);  
+		telText= (TextView)findViewById(R.id.tel);  
+		paimingText= (TextView)findViewById(R.id.paiming);  
+		usrTypeText= (TextView)findViewById(R.id.userType);  
+		memberLevelText= (TextView)findViewById(R.id.memberLevel); 
+		registerTimeText= (TextView)findViewById(R.id.registerTime); 
+		companylinesText= (TextView)findViewById(R.id.companylines); 
+		companyAddressText= (TextView)findViewById(R.id.companyAddress); 
+		fetchData();
+		
+	}
+	
+	private void fetchData() {
+
+		this.initProgress("加载中......");
+		this.mLoadData.getDpInfo(baseHandler, DefaultConst.CMD_DP_INFO_QUERY_RESULT,phone);
+	}
+	
+	public void doFooterCenter(){
+		startActivity(new Intent(this, CompleteActivity.class));
+	}
+	@Override
+	protected void ioHandler(Message msg) {
+		hindProgress();
+		renderData((JSONObject)msg.obj);
+	}
+
+	@Override
+	protected void doError(Message msg) {
+		
+	}
+	
+	private void renderData(JSONObject jsonData) {
+		JSONObject data = null;
+		try {
+			data = jsonData.getJSONObject("member");
+		} catch (JSONException e) {
+			e.printStackTrace();
+			return;
+		}
+		//base转图片
+//		String picture = data.optString("idCardPhoto");
+//		if(!Common.isEmpty(picture)){
+//			pictureImageView.setImageBitmap(ImageUtils.base642BigMap(picture));
+//		}
+		String url = DisplayUtil.toAbsoluteUrl(data.optString("photoAddr"));
+		if(!Common.isEmpty(url)){
+			ImageLoader.getInstance().displayImage(
+					url, 
+					pictureImageView,
+					options);
+		}
+		//姓名
+		realNameText.setText(data.optString("REALNAME"));
+		//诚信值
+		yslAccountText.setText(data.optString("YSLACCOUNT"));
+		//公司名称
+		companyNameText.setText(data.optString("COMPANYNAME"));
+		//发货星级展示	
+		fahuoxingjiBar.setRating( data.optInt("SHIPPOINT"));
+		//发货次数
+		fahuoxingjiCountText.setText(data.optInt("BSHIPCOUNT")+"个评价");
+		//承运星级
+		chengyunxingjiBar.setRating(data.optInt("CARRYPOINT"));
+		
+		//承运次数
+		chengyunxingjiCountText.setText(data.optInt("BCARRYCOUNT")+"个评价");
+		//提示
+		commentText.setText(data.optString("comment"));
+		//等级
+		levelView.setText(data.optString("serviceName"));
+		//认证
+		if(data.optString("DCT_UA").equals("UCERT_PS")){
+			commentText.setText("已认证");
+		}else {
+			commentText.setText("未认证");
+		}
+		 mobile=data.optString("MOBILE1");
+		 tel=data.optString("TEL1");
+		mobileText.setText(mobile);		
+		telText.setText(tel);
+		//当地排名
+		String cityName=data.optString("cityName");
+		if(!Common.isEmpty(cityName)){
+			paimingText.setText(cityName+"第"+data.optInt("localTrustLevel")+"名");	
+		}
+		//会员类型
+		usrTypeText.setText(Identity.getIdentity(data.optString("DCT_UT")).getDescription());
+		//会员级别
+		memberLevelText.setText(data.optString("serviceName")); 
+		//注册时间
+		JSONObject t = data.optJSONObject("CREATE_TIME");
+		if(!(t==null||t.length()==0)){			
+			registerTimeText.setText(DisplayUtil.renderDate(new Date(t.optLong("time")), "yyyy-MM-dd hh:mm:ss"));
+
+		}
+		
+		companylinesText.setText(data.optString("BUSILINES"));
+		companyAddressText.setText(data.optString("BUSIADDRESS"));
+		
+	}
+}

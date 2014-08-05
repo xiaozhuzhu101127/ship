@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/ll_more"
+        android:layout_width="fill_parent"
+        android:layout_height="60dip"
+        android:gravity="center" 
+        android:background="@color/color_gray"
+        android:onClick="onClick">
+
+        <ImageView
+            android:id="@+id/mediawall_img_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/srolllistview_loading" />
+
+        <TextView
+            android:id="@+id/mediawall_onload_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="加载中..."
+            android:textColor="@color/color_black"
+            android:textSize="15sp" />
+    </LinearLayout>
+ 

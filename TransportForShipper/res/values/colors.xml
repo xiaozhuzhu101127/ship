@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="color_background">#E1F4FA</color>
+    <color name="transparent">#00000000</color>
+    <color name="main_background">#C3E4EC</color>
+    <color name="color_background_2">#E3E7E8</color>
+    <color name="color_gray">#E9E9E9</color>
+    <color name="color_black">#000000</color>
+    <color name="gridview">#134B8E</color>
+    <color name="gridview2">#7F7168</color>
+    <color name="color_black2">#666666</color>
+    <color name="color_red">#CC6600</color>
+    <color name="color_black3">#333333</color>
+    <color name="color_zi">#B73A04</color>
+    <color name="color_while">#FFFFFF</color>
+    <color name="color_footer">#C3E4ED</color>
+    <color name="color_orange">#FF6600</color>
+</resources>

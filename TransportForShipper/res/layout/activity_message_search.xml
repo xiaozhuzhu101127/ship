@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_background"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/title_bar"
+        layout="@layout/common_title" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingLeft="@dimen/h_margin_big"
+                android:paddingRight="@dimen/h_margin_big" >
+
+                
+
+
+
+              
+
+                <LinearLayout
+                    android:id="@+id/complete_for_driver"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/item_height"
+                        android:layout_marginTop="@dimen/complete_input_margin"
+                        android:background="@drawable/common_spinner_bg"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="12dp"
+                        android:paddingRight="15dp" 
+                        android:id="@+id/rl_complete_truck_type"
+                        android:onClick="onClick">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="车型" />
+
+                        <TextView
+                            android:id="@+id/complete_truck_type"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="80dp"
+                            android:background="@null"                         
+                            android:tag="" />
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/item_height"
+                        android:layout_marginTop="@dimen/complete_input_margin"
+                        android:background="@drawable/common_spinner_bg"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="12dp"
+                        android:paddingRight="15dp" 
+                        android:id="@+id/rl_complete_truck_length"
+                        android:onClick="onClick"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="车长" />
+
+                        <TextView
+                            android:id="@+id/complete_truck_length"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="80dp"
+                            android:background="@null"                            
+                            android:tag="" />
+                    </RelativeLayout>
+                    
+                    
+                    
+                    
+                    
+                      <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/item_height"
+                        android:layout_marginTop="@dimen/complete_input_margin"
+                        android:background="@drawable/common_spinner_bg"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="12dp"
+                        android:paddingRight="15dp"                      
+                      
+                        >
+  <EditText
+                                android:id="@+id/complete_target1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"                              
+                                android:layout_marginRight="20dp"
+                                android:background="@null"
+                                android:hint="常跑路线"
+                                android:tag="" />
+
+                            <View
+                                android:id="@+id/for_target1"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@null" 
+                                android:onClick="onClick"/>
+                    </RelativeLayout>
+                    
+
+                 
+
+                    
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/complete_submit"
+                android:background="@drawable/btn20782"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="@dimen/h_margin_tiny"
+                android:layout_marginRight="@dimen/h_margin_tiny"
+                android:layout_marginTop="8dp"
+                android:onClick="onClick"
+                android:text="搜索" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

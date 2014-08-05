@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="@color/color_background">
+    <include
+        layout="@layout/common_title"/>
+    <ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:layout_weight="1" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="14dp"
+            android:paddingRight="14dp" >
+		    <TextView 
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:layout_marginTop="7dp"
+			    android:padding="10dp"
+			    android:background="@drawable/publishbg"
+			    android:drawableLeft="@drawable/abouttb"
+			    android:drawableRight="@drawable/jt"
+			    android:text="  关于软件"
+			    style="@style/main_style_1"
+			    android:gravity="center_vertical"
+			    android:clickable="true"
+			    android:onClick="click"
+			    android:id="@+id/about"/>
+		    <TextView 
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:layout_marginTop="7dp"
+			    android:padding="10dp"
+			    android:background="@drawable/publishbg"
+			    android:drawableLeft="@drawable/wttb"
+			    android:drawableRight="@drawable/jt"
+			    android:text="  常见问题"
+			    style="@style/main_style_1"
+			    android:gravity="center_vertical"
+			    android:clickable="true"
+			    android:onClick="click"
+			    android:id="@+id/wt"/>
+		    <TextView 
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:layout_marginTop="7dp"
+			    android:padding="10dp"
+			    android:background="@drawable/publishbg"
+			    android:drawableLeft="@drawable/tjtb"
+			    android:drawableRight="@drawable/jt"
+			    android:text="  推荐给朋友"
+			    style="@style/main_style_1"
+			    android:gravity="center_vertical"
+			    android:clickable="true"
+			    android:onClick="click"
+			    android:id="@+id/tj"/>
+		    <TextView 
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:layout_marginTop="7dp"
+			    android:padding="10dp"
+			    android:background="@drawable/publishbg"
+			    android:drawableLeft="@drawable/zltb"
+			    android:drawableRight="@drawable/jt"
+			    android:text="  完善资料"
+			    style="@style/main_style_1"
+			    android:gravity="center_vertical"
+			    android:clickable="true"
+			    android:onClick="click"
+			    android:id="@+id/zl"/>
+		    <TextView 
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:layout_marginTop="7dp"
+			    android:padding="10dp"
+			    android:background="@drawable/publishbg"
+			    android:drawableLeft="@drawable/hztb"
+			    android:drawableRight="@drawable/jt"
+			    android:text="  营销代表专用"
+			    style="@style/main_style_1"
+			    android:gravity="center_vertical"
+			    android:clickable="true"
+			    android:onClick="click"
+			    android:id="@+id/zy"/>
+		    <TextView 
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:layout_marginTop="7dp"
+			    android:padding="10dp"
+			    android:background="@drawable/publishbg"
+			    android:drawableLeft="@drawable/zhye"
+			    android:drawableRight="@drawable/jt"
+			    android:text="  账户余额"
+			    style="@style/main_style_1"
+			    android:gravity="center_vertical"
+			    android:clickable="true"
+			    android:onClick="click"
+			    android:id="@+id/my560"/>
+		    <TextView 
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:layout_marginTop="7dp"
+			    android:padding="10dp"
+			    android:background="@drawable/publishbg"
+			    android:drawableLeft="@drawable/xgmm"
+			    android:drawableRight="@drawable/jt"
+			    android:text="  密码修改"
+			    style="@style/main_style_1"
+			    android:gravity="center_vertical"
+			    android:clickable="true"
+			    android:onClick="click"
+			    android:id="@+id/updatepsd"/>
+		    <Button 
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:layout_marginTop="7dp"
+			    android:padding="10dp"
+			    android:background="@drawable/publishbg"
+			    android:drawableLeft="@drawable/lxwm"
+			    android:drawableRight="@drawable/jt"
+			    android:text="  联系我们"
+			    style="@style/main_style_1"
+			    android:gravity="center_vertical"
+			    android:onClick="click"
+			    android:id="@+id/contactus"/>
+		    </LinearLayout>
+	</ScrollView>	    
+    <Button
+        android:layout_width="match_parent"
+   		android:layout_height="40dp"
+   		android:layout_gravity="center_horizontal"
+   		android:layout_marginTop="10dp"
+   		android:background="@drawable/btn20782"
+   		style="@style/title_style"
+   		android:text="@string/quit"
+   		android:onClick="click"
+   		android:id="@+id/btn_setting_logout"/>
+</LinearLayout>

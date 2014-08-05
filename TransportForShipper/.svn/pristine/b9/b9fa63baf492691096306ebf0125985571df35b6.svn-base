@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/head480bg"
+    android:gravity="center_vertical" >
+
+    <Button
+        android:id="@+id/common_back"
+        android:layout_width="59dp"
+        android:layout_height="27.9dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="5dp"
+        android:background="@drawable/back"
+        android:layout_centerVertical="true"
+        android:onClick="commonClick"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_centerHorizontal="true"
+        android:paddingRight="31dp"
+        android:gravity="center_vertical"
+        style="@style/title_style"
+        android:id="@+id/common_title" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="27.9dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="5dp"
+        android:gravity="center_vertical"
+        android:layout_centerVertical="true"
+        android:background="@drawable/titlebtbg"
+        android:clickable="true"
+        android:onClick="commonClick"
+        android:paddingLeft="5dp"
+        android:text="地区"
+        style="@style/title_style"
+        android:id="@+id/title_place"
+        android:visibility="gone"/>
+    <Button
+        android:id="@+id/common_main"
+        android:layout_width="59dp"
+        android:layout_height="27.9dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/daohang"
+        android:layout_centerVertical="true"
+        android:visibility="gone"
+        android:onClick="commonClick"/>
+    <!-- 推荐 -->
+    <Button
+        android:id="@+id/common_recommand"
+        android:layout_width="59dp"
+        android:layout_height="27.9dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/title_bg2"
+        android:layout_centerVertical="true"
+        style="@style/title_style"
+        android:text="@string/recommend"
+        android:visibility="gone"
+        android:onClick="commonClick"/>
+   	<!-- 网上货源 -->
+    <Button
+        android:id="@+id/title_goods"
+        android:layout_width="109dp"
+        android:layout_height="27.9dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="5dp"
+        android:background="@drawable/title_bg2"
+        android:layout_centerVertical="true"
+        style="@style/title_style"
+        android:text="@string/thgoods"
+        android:visibility="gone"
+        android:onClick="commonClick"/>
+</RelativeLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="CountDownButton">
+        <attr name="countDown" format="integer" />
+        <attr name="countDownLabel" format="string" />
+    </declare-styleable>
+    <declare-styleable name="MainItemView">
+        <attr name="icon" format="integer" />
+        <attr name="labelBig" format="string" />
+        <attr name="labelSmall" format="string" />
+    </declare-styleable>
+
+</resources>

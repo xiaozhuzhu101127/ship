@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_background"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <include
+        layout="@layout/common_title" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:padding="7dp" >
+        <EditText
+            android:id="@+id/correct_content"
+            android:layout_width="match_parent"
+            android:layout_height="111.1dp"
+            android:layout_marginTop="40dp"
+            android:background="@drawable/tsbg"
+            android:ems="10"
+            android:gravity="left|top"
+            android:inputType="textMultiLine"
+            android:lines="4"
+            android:padding="7dp"
+            android:scrollbars="vertical"
+            android:textColorLink="@android:color/black"
+            android:hint="@string/tshint" 
+            style="@style/main_style_7">
+        </EditText>
+	    <TextView
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="10dp"
+	        android:paddingLeft="10dp"
+	        style="@style/main_style_4"
+	        android:text="@string/tshint2"/>
+    </LinearLayout>
+	<LinearLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:paddingLeft="7dp"
+	        android:paddingRight="7dp">
+	    <!-- 电话投诉 -->
+	    <TextView
+	   		android:layout_width="80dp"
+	    	android:layout_height="50dp"
+	    	android:padding="7dp"
+	    	android:gravity="center"
+	    	android:background="@drawable/footerbg1"
+	   		android:drawableLeft="@drawable/tel2"
+	   		style="@style/main_style_4"
+	   		android:text="@string/ts"
+	   		android:clickable="true"
+	   		android:onClick="click"
+	   		android:id="@+id/ts_telts"/>
+	    <!-- 中间按钮 -->
+	    <TextView
+	        android:layout_width="0dp"
+	   		android:layout_height="48.5dp"
+	   		android:layout_weight="1"
+	   		android:layout_marginLeft="5dp"
+	   		android:gravity="center"
+	   		android:background="@drawable/btn20782"
+	   		style="@style/title_style"
+	   		android:text="@string/subts"
+	   		android:clickable="true"
+	   		android:onClick="click"
+	   		android:id="@+id/ts_center"/>
+	    <!-- 取消 -->
+	    <TextView
+	   		android:layout_width="80dp"
+	    	android:layout_height="50dp"
+	    	android:layout_marginLeft="5dp"
+	    	android:padding="7dp"
+	    	android:gravity="center"
+	    	android:background="@drawable/footerbg1"
+	   		android:drawableLeft="@drawable/qxtb"
+	   		style="@style/main_style_4"
+	   		android:text="@string/cancle"
+	   		android:clickable="true"
+	   		android:onClick="click"
+	   		android:id="@+id/ts_cancle"/>
+	</LinearLayout>
+</LinearLayout>

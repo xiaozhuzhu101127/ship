@@ -1,0 +1,219 @@
+package com.topjet.shipper.adapter;
+
+import java.util.LinkedList;
+import java.util.List;
+
+import org.json.JSONArray;
+import org.json.JSONObject;
+
+import com.topjet.shipper.activity.GoodsPeerListActivity;
+import com.topjet.shipper.util.Common;
+import com.topjet.shipper.util.Dict;
+import com.topjet.shipper.R;
+
+import android.content.Context;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.ViewGroup;
+import android.widget.BaseAdapter;
+import android.widget.Button;
+import android.widget.TextView;
+
+/**  
+ * <pre>
+ * Copyright:	Copyright (c)2014 
+ * Company:		杭州龙驹信息科技有限公司
+ * Author:		wanghm
+ * Create at:	2014-5-22 下午5:06:35  
+ * Description:同行货源
+ *
+ * 修改历史:
+ * 日期    作者    版本  修改描述
+ * ------------------------------------------------------------------  
+ * 
+ * </pre>
+ */  
+public class GoodsPeerAdapter extends BaseAdapter implements OnClickListener{
+	
+	private Context context;
+	private LayoutInflater inflater;
+	private LinkedList<JSONObject> data;
+	private boolean loading = false;
+	
+	public GoodsPeerAdapter(Context context){
+		this.data = new LinkedList<JSONObject>();
+		this.context = context;
+		inflater = LayoutInflater.from(context);
+	}
+	public void setData(JSONArray data){
+		if(null == data){
+			return;
+		}
+		if(null != this.data){
+			this.data.clear();
+		}
+		for(int i = 0;i<data.length();i++){
+			this.data.add(data.optJSONObject(i));
+		}
+	}
+
+	public List<JSONObject> getData(){
+		return data;
+	}
+
+	public void prependData(JSONArray data){
+		if(null == data){
+			return;
+		}
+		for(int i = data.length() - 1;i>=0;i--){
+			this.data.addFirst(data.optJSONObject(i));
+		}
+	}
+
+	public void appendData(JSONArray data){
+		if(null == data){
+			return;
+		}
+		for(int i = 0;i < data.length();i++){
+			this.data.add(data.optJSONObject(i));
+		}
+	}
+
+	public boolean isLoading() {
+		return loading;
+	}
+
+	public void setLoading(boolean loading) {
+		this.loading = loading;
+	}
+	@Override
+	public int getCount() {
+		return data.size();
+	}
+
+	@Override
+	public Object getItem(int position) {
+		if (position < 0 || position >= data.size()) {
+			return null;
+		}
+		return data.get(position);
+	}
+
+	@Override
+	public long getItemId(int position) {
+		return position;
+	}
+
+	@Override
+	public View getView(int position, View convertView, ViewGroup parent) {
+		TextView countView;
+		TextView timeView;
+		TextView departView;
+		TextView targetView;
+		TextView infoView;
+		TextView pubView;
+		Button callButton;
+		Button copyButton;
+		Datawrapper datawrapper;
+		if(null == convertView){
+			convertView = inflater.inflate(context.getResources().getLayout(R.layout.item_goods_peer), null);
+			countView = (TextView) convertView.findViewById(R.id.item_today_goods_count);
+			timeView = (TextView) convertView.findViewById(R.id.item_today_goods_time);
+			departView = (TextView) convertView.findViewById(R.id.item_today_goods_depart);
+			targetView = (TextView) convertView.findViewById(R.id.item_today_goods_target);
+			infoView = (TextView) convertView.findViewById(R.id.item_today_goods_gsinfo);
+			pubView = (TextView) convertView.findViewById(R.id.item_today_goods_publisher);
+			callButton = (Button) convertView.findViewById(R.id.item_today_goods_call);
+			copyButton = (Button) convertView.findViewById(R.id.item_today_goods_copy);
+			datawrapper = new Datawrapper(countView, timeView, departView, targetView, infoView, pubView, callButton, copyButton);
+			convertView.setTag(datawrapper);
+		}else{
+			datawrapper = (Datawrapper) convertView.getTag();
+			countView = datawrapper.countView;
+			timeView = datawrapper.timeView;
+			departView = datawrapper.departView;
+			targetView = datawrapper.targetView;
+			infoView = datawrapper.infoView;
+			pubView = datawrapper.pubView;
+			callButton = datawrapper.callButton;
+			copyButton = datawrapper.copyButton;
+		}
+		JSONObject g = (JSONObject) getItem(position);
+		//报价人数
+		countView.setText("报价:"+g.optString("COUNTCALLPRICE")+"人");
+		//出发地
+		String ct_depart = Common.splitBX(g.optString("depart"));
+		departView.setText(Dict.getLocation(ct_depart));
+		//目的地
+		String ct_target = Common.splitBX(g.optString("target"));
+		targetView.setText(Dict.getLocation(ct_target));
+		// 货源信息、需车信息
+		StringBuilder info = new StringBuilder();
+		info.append(Dict.getGsType(g.optString("GSType")));
+		if(!Common.isEmpty(g.optString("GSSCALE"))|| !Common.isEmpty(g.optString("GSUNIT")))
+			info.append(Common.weightOrVolume(g.optString("GSSCALE"), g.optString("GSUNIT")));
+		info.append(" 需");
+		if(!Common.isEmpty(g.optString("TKLen")))
+			info.append(Dict.getTruckLength(g.optString("TKLen"))).append(" ");
+		if(!Common.isEmpty(g.optString("TKType")))
+			info.append(Dict.getTruckType(g.optString("TKType")));
+		if(Common.isEmpty(g.optString("TKLen")) && Common.isEmpty(g.optString("TKType"))){
+			info.append("车1辆");
+		}else {
+			info.append("1辆");
+		}
+		infoView.setText(info);
+		//时间
+		timeView.setText(g.optString("CREATE_TIME"));
+		//发布者
+		if(!Common.isEmpty(g.optString("GSORGNAME"))){
+			pubView.setText(g.optString("GSORGNAME"));
+		}else {
+			pubView.setText("未认证用户");
+		}
+		callButton.setTag(g.optString("CONTACTTEL"));
+		callButton.setOnClickListener(this);
+		copyButton.setTag(g.optLong("GSID"));
+		copyButton.setOnClickListener(this);
+		return convertView;
+	}
+	
+	private class Datawrapper{
+		private TextView countView;
+		private TextView timeView;
+		private TextView departView;
+		private TextView targetView;
+		private TextView infoView;
+		private TextView pubView;
+		private Button callButton;
+		private Button copyButton;
+		public Datawrapper(TextView countView, TextView timeView, TextView departView, TextView targetView,
+				TextView infoView, TextView pubView, Button callButton, Button copyButton) {
+			super();
+			this.countView = countView;
+			this.timeView = timeView;
+			this.departView = departView;
+			this.targetView = targetView;
+			this.infoView = infoView;
+			this.pubView = pubView;
+			this.callButton = callButton;
+			this.copyButton = copyButton;
+		}
+		
+		
+	}
+
+	@Override
+	public void onClick(View v) {
+		switch (v.getId()) {
+		case R.id.item_today_goods_call:
+			((GoodsPeerListActivity) context).callPub((String)v.getTag());
+			break;
+		case R.id.item_today_goods_copy:
+			((GoodsPeerListActivity) context).copyGoods(v.getTag());
+			break;	
+		}
+		
+	}
+}

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_background"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/title_bar"
+        layout="@layout/common_title" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="7dp"
+            android:paddingRight="7dp" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="43.81dp"
+                android:layout_marginTop="20dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="5dp"
+                android:paddingRight="10dp" >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="请输入新密码"
+                    style="@style/suc_goods_3" />
+
+                <EditText
+                    android:id="@+id/new_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/common_while_bg"
+                    android:inputType="number"                                 
+                    style="@style/suc_goods_3" />
+            </LinearLayout>
+
+         
+
+            <Button
+                android:id="@+id/recommend_send"
+                android:layout_width="match_parent"
+                android:layout_height="48.5dp"
+                android:layout_marginLeft="7dp"
+                android:layout_marginRight="7dp"
+                android:background="@drawable/btn20782"
+                android:layout_marginTop="20dp"
+                android:text="密码修改"
+                android:onClick="onClick"
+                style="@style/login_1" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

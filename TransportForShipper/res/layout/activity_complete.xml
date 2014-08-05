@@ -1,0 +1,544 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_background"
+    android:orientation="vertical" >
+
+    <include
+        android:id="@+id/title_bar"
+        layout="@layout/common_title" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp" 
+        android:fadeScrollbars="false"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical" >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="7dp" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/item_height"
+                    android:background="@drawable/publishbg"
+                    android:gravity="center_vertical"
+                    android:layout_marginTop="7dp"
+		        	android:padding="7dp" >
+
+                    <TextView
+                        style="@style/main_style_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="@string/yourno" />
+
+                    <EditText
+                        android:id="@+id/complete_idc"
+                        style="@style/main_style_6"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="80dp"
+                        android:paddingLeft="7dp"
+                        android:layout_centerVertical="true"
+                        android:background="#F0F0F0"
+                        android:hint="@string/select2"
+                        android:maxLength="18"
+                        android:singleLine="true"
+                        android:text="" 
+                        android:enabled="false"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/item_height"
+                    android:layout_marginTop="@dimen/complete_input_margin"
+                    android:background="@drawable/common_while_bg"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="15dp" >
+
+                    <TextView
+                        style="@style/main_style_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/yourname"
+                        android:layout_centerVertical="true" />
+
+                    <EditText
+                        android:id="@+id/complete_name"
+                        style="@style/main_style_6"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="80dp"
+                        android:background="#F0F0F0"
+                        android:hint="@string/select2"
+                        android:singleLine="true"
+                        android:paddingLeft="7dp"
+                        android:text="" 
+                        android:enabled="false"/>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/item_height"
+                    android:layout_marginTop="@dimen/complete_input_margin"
+                    android:background="@drawable/common_spinner_bg"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="15dp" >
+
+                    <TextView
+                        style="@style/main_style_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="@string/yourut" />
+
+                    <TextView
+                        android:id="@+id/complete_identity"
+                        style="@style/main_style_4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="80dp"
+                        android:layout_centerVertical="true"
+                        android:background="@null"
+                        android:paddingLeft="7dp"
+                        android:textColor="#999999" />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/item_height"
+                    android:layout_marginTop="@dimen/complete_input_margin"
+                    android:background="@drawable/common_while_bg"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="15dp" >
+
+                    <TextView
+                        style="@style/main_style_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="公司名称："
+                        android:layout_centerVertical="true" />
+
+                    <EditText
+                        android:id="@+id/complete_company"
+                        style="@style/main_style_6"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="80dp"
+                        android:background="#F0F0F0"
+                        android:hint="@string/select2"
+                        android:singleLine="true" 
+                        android:layout_centerVertical="true"
+                        android:paddingLeft="7dp"
+                        android:enabled="false"/>
+                </RelativeLayout>
+                
+                 <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/item_height"
+                    android:layout_marginTop="@dimen/complete_input_margin"
+                    android:background="@drawable/common_while_bg"
+                    android:paddingLeft="12dp"
+                    android:paddingRight="15dp" >
+
+                    <TextView
+                        style="@style/main_style_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="经营地址：" 
+                        android:layout_centerVertical="true"/>
+
+                    <EditText
+                        android:id="@+id/complete_address"
+                        style="@style/main_style_6"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="80dp"
+                        android:background="#F0F0F0"
+                        android:hint="@string/select2"
+                        android:singleLine="true" 
+                        android:layout_centerVertical="true"
+                        android:enabled="false"
+                        android:paddingLeft="7dp"/>
+                </RelativeLayout>
+                
+
+                <LinearLayout
+                    android:id="@+id/complete_for_driver"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/item_height"
+                        android:layout_marginTop="@dimen/complete_input_margin"
+                        android:baselineAligned="false"
+                        android:weightSum="15" >
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="7"
+                            android:background="@drawable/common_spinner_bg"
+                            android:paddingLeft="12dp" >
+
+                            <TextView
+                                style="@style/main_style_4"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="车牌：" 
+                                android:layout_centerVertical="true"/>
+
+                            <Spinner
+                                android:id="@+id/complete_plate_region_select"
+                                style="@style/main_style_4"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:entries="@array/plate_region"
+                                android:paddingLeft="60dp"
+                                android:paddingRight="20dp"
+                                android:spinnerMode="dropdown" 
+                                android:layout_centerVertical="true"/>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="3"
+                            android:background="@drawable/common_spinner_bg" >
+
+                            <Spinner
+                                android:id="@+id/complete_plate_letter_select"
+                                style="@style/main_style_4"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:entries="@array/plate_letter"
+                                android:paddingLeft="12dp"
+                                android:paddingRight="20dp"
+                                android:spinnerMode="dropdown"
+                                android:layout_centerVertical="true" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="5"
+                            android:background="@drawable/common_while_bg"
+                            android:paddingLeft="12dp"
+                            android:paddingRight="20dp" >
+
+                            <EditText
+                                android:id="@+id/complete_plate_order"
+                                style="@style/main_style_6"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:background="@null"
+                                android:inputType="text"
+                                android:maxLength="5" />
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/item_height"
+                        android:layout_marginTop="@dimen/complete_input_margin"
+                        android:background="@drawable/common_spinner_bg"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="12dp"
+                        android:paddingRight="15dp" 
+                        android:id="@+id/rl_complete_truck_type"
+                        android:onClick="onClick">
+
+                        <TextView
+                            style="@style/main_style_4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="车型：" 
+                            android:layout_centerVertical="true"/>
+
+                        <TextView
+                            android:id="@+id/complete_truck_type"
+                            style="@style/main_style_4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="80dp"
+                            android:background="@null"                         
+                            android:tag="" 
+                            android:layout_centerVertical="true"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/item_height"
+                        android:layout_marginTop="@dimen/complete_input_margin"
+                        android:background="@drawable/common_spinner_bg"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="12dp"
+                        android:paddingRight="15dp" 
+                        android:id="@+id/rl_complete_truck_length"
+                        android:onClick="onClick"
+                        >
+
+                        <TextView
+                            style="@style/main_style_4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="车长：" 
+                            android:layout_centerVertical="true"/>
+
+                        <TextView
+                            android:id="@+id/complete_truck_length"
+                            style="@style/main_style_4"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="80dp"
+                            android:background="@null"                            
+                            android:tag="" 
+                            android:layout_centerVertical="true"/>
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/item_height"
+                        android:layout_marginTop="@dimen/complete_input_margin"
+                        android:baselineAligned="false"
+                        android:weightSum="2" >
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/common_spinner_bg" >
+
+                            <EditText
+                                android:id="@+id/complete_target1"
+                                style="@style/main_style_4"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="12dp"
+                                android:layout_marginRight="20dp"
+                                android:background="@null"
+                                android:hint="常跑路线："
+                                android:tag="" 
+                                android:layout_centerVertical="true"/>
+
+                            <View
+                                android:id="@+id/for_target1"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@null" 
+                                android:onClick="onClick"/>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/common_spinner_bg"
+                            android:paddingLeft="12dp"
+                            android:paddingRight="20dp" >
+
+                            <EditText
+                                android:id="@+id/complete_target2"
+                                style="@style/main_style_4"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:hint="常跑路线："
+                                android:tag="" 
+                                android:layout_centerVertical="true"/>
+
+                            <View
+                                android:id="@+id/for_target2"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:onClick="onClick"
+                                android:background="@null" 
+                                android:layout_centerVertical="true"/>
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/item_height"
+                        android:layout_marginTop="@dimen/complete_input_margin"
+                        android:baselineAligned="false"
+                        android:weightSum="2" >
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/common_spinner_bg"
+                            android:paddingLeft="12dp"
+                            android:paddingRight="20dp" >
+
+                            <EditText
+                                android:id="@+id/complete_target3"
+                                style="@style/main_style_4"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:hint="常跑路线："
+                                android:tag="" 
+                                android:layout_centerVertical="true"/>
+
+                            <View
+                                android:id="@+id/for_target3"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:onClick="onClick"
+                                android:background="@null" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/common_spinner_bg"
+                            android:paddingLeft="12dp"
+                            android:paddingRight="20dp" >
+
+                            <EditText
+                                android:id="@+id/complete_target4"
+                                style="@style/main_style_4"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@null"
+                                android:hint="常跑路线："
+                                android:tag="" 
+                                android:layout_centerVertical="true"/>
+
+                            <View
+                                android:id="@+id/for_target4"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:onClick="onClick"
+                                android:background="@null" />
+                        </RelativeLayout>
+                    </LinearLayout>
+                    
+                    <RelativeLayout
+		                android:id="@+id/searchViolate"
+		                android:layout_width="fill_parent"
+		                android:layout_height="120dp"
+		                android:layout_marginBottom="@dimen/category_item_margin"
+		                android:layout_marginTop="5dp"
+		                android:background="@drawable/common_while_bg"
+		                android:onClick="onClick"
+		                android:paddingLeft="20dp"
+		                android:paddingRight="20dp" >
+		               
+		                    <LinearLayout 
+		                        android:layout_width="fill_parent"
+		                         android:layout_height="wrap_content"
+		                          android:orientation="horizontal"
+		                          android:paddingTop="14dp"
+		                          android:gravity="center"
+		                                              >
+		                    
+		                          <ImageView 
+		                                android:layout_width="wrap_content"
+				                    android:layout_height="wrap_content"
+				                    android:src="@drawable/voilate1"
+				                    android:paddingRight="15dp"
+		                              />
+				                <TextView
+				             
+				                    android:layout_width="wrap_content"
+				                    android:layout_height="wrap_content"
+				                    android:layout_centerInParent="true"
+				                    android:text="上传行驶证："
+				                    android:textColor="#595959"
+				                    android:textSize="18sp" />
+				           </LinearLayout>
+		
+		                 <TextView
+				                
+				                    android:layout_width="wrap_content"
+				                    android:layout_height="wrap_content"
+				                    android:layout_centerInParent="true"
+				                    android:text="拍摄清晰行驶证照片"
+				                    android:textColor="#595959"
+				                    android:textSize="18sp"
+				                       android:paddingTop="14dp"
+				                     />
+		            </RelativeLayout>
+                    
+                </LinearLayout>
+            </LinearLayout>
+			<ImageView
+                        android:id="@+id/violatePicture"
+                        android:layout_width="match_parent"
+                        android:layout_height="350dp" />
+            
+        </LinearLayout>
+        
+    </ScrollView>
+	<LinearLayout 
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:orientation="horizontal"
+		    android:background="@color/color_background"
+		    android:padding="5dp">
+            <!-- 谁在查我 -->
+		    <TextView
+		   		android:layout_width="80dp"
+		    	android:layout_height="50dp"
+		    	android:padding="7dp"
+		    	android:gravity="center"
+		    	android:background="@drawable/footerbg1"
+		   		android:drawableLeft="@drawable/szcwtb"
+		   		style="@style/main_style_4"
+		   		android:text="@string/queryme"
+		   		android:clickable="true"
+		   		android:onClick="onClick"
+		   		android:id="@+id/complete_szcw"/>
+		    <!-- 中间按钮 -->
+		    <TextView
+		        android:layout_width="0dp"
+		   		android:layout_height="48.5dp"
+		   		android:layout_weight="1"
+		   		android:layout_marginLeft="5dp"
+		   		android:gravity="center"
+		   		android:background="@drawable/btn20782"
+		   		style="@style/title_style"
+		   		android:text="@string/subupdate"
+		   		android:clickable="true"
+		   		android:onClick="onClick"
+		   		android:id="@+id/complete_submit"/>
+		    <!-- 我的评价 -->
+		    <TextView
+		   		android:layout_width="80dp"
+		    	android:layout_height="50dp"
+		    	android:layout_marginLeft="5dp"
+		    	android:padding="7dp"
+		    	android:gravity="center"
+		    	android:background="@drawable/footerbg1"
+		   		style="@style/main_style_4"
+		   		android:text="@string/bc"
+		   		android:clickable="true"
+		   		android:onClick="onClick"
+		   		android:id="@+id/complete_bc"/>
+		</LinearLayout>
+</LinearLayout>
